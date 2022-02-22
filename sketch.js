@@ -1,15 +1,15 @@
 //constants/globals
-var arr = Array(0);
+let arr = [];
 const width = window.innerWidth;
-const height = window.innerHeight - 200;
-var thick = 20;
-var len_arr = Math.floor(width / thick);
-var sorted_arr = Array(0);
-var start_sorting = false;
-var frame_rate_val = 40;
-var timer_arr = [];
-var time_taken = 0;
-var pause = false;
+const height = window.innerHeight - 75;
+let thick = 20;
+let len_arr = Math.floor(width / thick);
+let sorted_arr = [];
+let start_sorting = false;
+let frame_rate_val = 40;
+let timer_arr = [];
+let time_taken = 0;
+let pause = false;
 //each bar has following properties
 class Element {
     constructor(val) {
@@ -18,8 +18,8 @@ class Element {
         this.swap = false;
         this.sub_arr = false;
     }
-
-    draw(i, color = 255) {
+    //compare(blue), swap(red), nop(green) 
+    design(i, color = 255) { // black
         fill(color);
         if (this.compare == true) {
             fill(0, 0, 255);
@@ -32,6 +32,8 @@ class Element {
         this.compare = false; //reset the vals as i only want one time display
         this.pivot = false; //waste delete it later(arr.pivot prop)
         rect(i * thick, height - this.val + 1, thick, this.val);
+        // ellipse(i * thick + 20,height - this.val + 10,10,this.val - height);
+        console.log(this.val);
         if (thick > 5) {
             noStroke(); //mix with rect
             ellipse(
@@ -191,6 +193,14 @@ function setup_arr() {
 function start_sort(algo) {
     loop_counter = algo_dict[algo](arr);
 }
+function draw_arr() {
+    for (let i = 0; i < arr.length; i++) {
+        arr[i].design(i);
+        if (sorted_arr[i] == arr[i].val) {
+            arr[i].design(i, color(0, 255, 0));
+        }
+    }
+}
 function draw() {
     background(0);
 
@@ -200,14 +210,6 @@ function draw() {
     draw_arr();
 }
 
-function draw_arr() {
-    for (let i = 0; i < arr.length; i++) {
-        arr[i].draw(i);
-        if (sorted_arr[i] == arr[i].val) {
-            arr[i].draw(i, color(0, 255, 0));
-        }
-    }
-}
 function sort_the_arr(arr) {
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr.length - i - 1; j++) {
