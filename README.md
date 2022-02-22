@@ -1,15 +1,15 @@
-# Sorting visualizer 🚀 💥 
+# Sorting visualizer 🚀
 
 > **A visualizer web application that visualizes certain sorting algorithms
 > using p5.js**.
 
-## Screenshots 🤩 ☺️
+## Screenshots ☺️
 
 
 
 
 
-## Installation 💻 🖥️ 
+## Installation 🖥️ 
 
 1. Download the required libraries 
 
@@ -20,18 +20,14 @@
 
 2. Clone the repo using
     
-    ```
-        git clone repo_url
-
+    ```git clone repo_url
     ```
     > NOTE : This repo will be cloned in your current working directory   
 
 3. To Open the file in your prefered browser 
 
-    ```
-        your_prefered_browser index.html
-    
-    ```
+    ```your_prefered_browser index.html
+     ```
     > In terminal
 
 
