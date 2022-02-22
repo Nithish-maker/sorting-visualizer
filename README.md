@@ -3,12 +3,10 @@
 > **A visualizer web application that visualizes certain sorting algorithms
 > using p5.js**.
 
-<<<<<<< HEAD
-## Output 🤩 ☺️
-=======
-## Screenshots ☺️
->>>>>>> 52a982dcf4960a6f7f61ebd6d3b6abd7de686cd5
+## Output 🤩 ☺
 
+
+https://user-images.githubusercontent.com/53591107/155159101-4c6ca11b-c531-4cdd-9cde-fad278f7e63c.mp4
 
 
 
