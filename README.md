@@ -3,7 +3,7 @@
 > **A visualizer web application that visualizes certain sorting algorithms
 > using p5.js**.
 
-## Screenshots 🤩 ☺️
+## Output 🤩 ☺️
 
 
 
